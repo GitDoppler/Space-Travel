@@ -14,9 +14,8 @@ menuClose.addEventListener("click", () => {
 });
 
 
-let url = window.location.pathname;
+let url = location.pathname.split("/").slice(-1)[0];
 url = url.replace(".html", "");
-url = url.replace("/", "");
 
 // Correspondence string-to-index. Can be done without this.
 const map = new Map([
