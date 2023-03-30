@@ -1,0 +1,367 @@
+/* Reset*/
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* Remove default margin */
+* {
+    margin: 0;
+    padding: 0;
+    font: inherit;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role='list'],
+ol[role='list'] {
+    list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+    scroll-behavior: smooth;
+}
+
+html,
+body {
+    min-height: 100vh;
+}
+
+/* Set core body defaults */
+body {
+    text-rendering: optimizeSpeed;
+    line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+    text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture,
+svg {
+    max-width: 100%;
+    display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+    html:focus-within {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
+
+/* Custom Properties */
+:root {
+    --clr-blue-dark: rgb(11, 13, 23);
+    --clr-blue-light: rgb(208, 214, 249);
+    --clr-white: rgb(255, 255, 255);
+
+    /* Typography */
+    --ff-primary: 'Bellefair', serif;
+    --ff-secondary: 'Barlow Condensed', sans-serif;
+    --ff-h1: var(--ff-primary);
+    --ff-h2: var(--ff-primary);
+    --ff-h3: var(--ff-primary);
+    --ff-h4: var(--ff-primary);
+    --ff-h5: var(--ff-secondary);
+    --ff-sub-h1: var(--ff-primary);
+    --ff-sub-h2: var(--ff-secondary);
+    --ff-nav: var(--ff-secondary);
+    --ff-body: var(--ff-secondary);
+
+    --fw-regular: 400;
+
+    --fs-h1: 5rem;
+    --fs-h2: 3.5rem;
+    --fs-h3: 1.5rem;
+    --fs-h4: 1rem;
+    --fs-h5: 1rem;
+    --fs-sub-h1: 1.75rem;
+    --fs-sub-h2: 0.875rem;
+    --fs-nav: 1rem;
+    --fs-body: 0.875rem;
+
+    --lh-h1: 6.25rem;
+    --lh-h2: 4rem;
+    --lh-h3: 1.75rem;
+    --lh-h4: 1.125rem;
+    --lh-h5: 1.1875rem;
+    --lh-sub-h1: 2rem;
+    --lh-sub-h2: 1rem;
+    --lh-nav: 1.1875rem;
+    --lh-body: 1.5625rem;
+
+    --ls-h5: 0.1687rem;
+    --ls-sub-h2: 0.1476rem;
+    --ls-nav: 0.1687rem;
+
+    --fs-h1--responsive: clamp(5.00rem, calc(3.46rem + 6.57vw), 9.38rem);
+    --fs-h2--responsive: clamp(3.50rem, calc(2.53rem + 4.13vw), 6.25rem);
+    --fs-h3--responsive: clamp(1.50rem, calc(0.80rem + 3.00vw), 3.50rem);
+    --fs-h4--responsive: clamp(1.13rem, calc(0.82rem + 1.31vw), 2.00rem);
+    --fs-h5--responsive: clamp(1.00rem, calc(0.74rem + 1.13vw), 1.75rem);
+    --fs-body--responsive: clamp(1.00rem, calc(0.76rem + 1.02vw), 1.25rem);
+}
+
+@media(min-width:48em) {
+    :root {
+        --fs-h1: 9.375rem;
+        --fs-h2: 5rem;
+        --fs-h3: 2.5rem;
+        --fs-h4: 1.5rem;
+        --fs-h5: 1.25rem;
+        --fs-nav: 0.875rem;
+        --fs-body: 1rem;
+
+        --lh-h1: 9.375rem;
+        --lh-h2: 7.1875rem;
+        --lh-h3: 4rem;
+        --lh-h4: 2.3125rem;
+        --lh-h5: 1.5rem;
+        --lh-body: 1.75rem;
+
+        --ls-h5: 3.375px;
+    }
+}
+
+@media(min-width:90em) {
+    :root {
+        --fs-h2: 6.25rem;
+        --fs-h3: 3.5rem;
+        --fs-h4: 2rem;
+        --fs-h5: 1.75rem;
+        --fs-nav: 1rem;
+        --fs-body: 1.125rem;
+
+        --lh-h1: 10.75rem;
+        --lh-h3: 4rem;
+        --lh-h4: 2.3125rem;
+        --lh-h5: 2.125rem;
+        --lh-body: 2rem;
+
+        --ls-h5: 4.725px;
+    }
+}
+
+/*  Utility Classes */
+
+.font-h1 {
+    font-family: var(--ff-h1);
+    font-size: var(--fs-h1);
+    line-height: var(--lh-h1);
+    color: var(--clr-white);
+}
+
+.font-h1--responsive {
+    font-family: var(--ff-h1);
+    font-size: var(--fs-h1--responsive);
+    line-height: var(--lh-h1);
+    color: var(--clr-white);
+}
+
+.font-h2 {
+    font-family: var(--ff-h2);
+    font-size: var(--fs-h2);
+    line-height: var(--lh-h2);
+    color: var(--clr-white);
+}
+
+.font-h2--responsive {
+    font-family: var(--ff-h2);
+    font-size: var(--fs-h2--responsive);
+    line-height: var(--lh-h2);
+    color: var(--clr-white);
+}
+
+.font-h3 {
+    font-family: var(--ff-h3);
+    font-size: var(--fs-h3);
+    line-height: var(--lh-h3);
+    color: var(--clr-white);
+}
+
+.font-h3--responsive {
+    font-family: var(--ff-h3);
+    font-size: var(--fs-h3--responsive);
+    line-height: var(--lh-h3);
+    color: var(--clr-white);
+}
+
+.font-h4 {
+    font-family: var(--ff-h4);
+    font-size: var(--fs-h4);
+    line-height: var(--lh-h4);
+    color: var(--clr-white);
+}
+
+.font-h4--responsive {
+    font-family: var(--ff-h4);
+    font-size: var(--fs-h4--responsive);
+    line-height: var(--lh-h4);
+    color: var(--clr-white);
+}
+
+.font-h5 {
+    font-family: var(--ff-h5);
+    font-size: var(--fs-h5);
+    line-height: var(--lh-h5);
+    letter-spacing: var(--ls-h5);
+    color: var(--clr-blue-light)
+}
+
+.font-h5--responsive {
+    font-family: var(--ff-h5);
+    font-size: var(--fs-h5--responsive);
+    line-height: var(--lh-h5);
+    color: var(--clr-blue-light)
+}
+
+.font-sub-h1 {
+    font-family: var(--ff-sub-h1);
+    font-size: var(--fs-sub-h1);
+    line-height: var(--lh-sub-h1);
+    color: var(--clr-white);
+}
+
+.font-sub-h2 {
+    font-family: var(--ff-sub-h2);
+    font-size: var(--fs-sub-h2);
+    line-height: var(--lh-sub-h2);
+    letter-spacing: var(--ls-sub-h2);
+    color: var(--clr-blue-light);
+}
+
+.font-nav {
+    font-family: var(--ff-nav);
+    font-size: var(--fs-nav);
+    line-height: var(--lh-nav);
+    letter-spacing: var(--ls-nav);
+    color: var(--clr-white);
+}
+
+.font-body {
+    font-family: var(--ff-body);
+    font-size: var(--fs-body);
+    line-height: var(--lh-body);
+    color: var(--clr-blue-light);
+}
+
+.font-body--responsive {
+    font-family: var(--ff-body);
+    font-size: var(--fs-body--responsive);
+    line-height: var(--lh-body);
+    color: var(--clr-blue-light);
+}
+
+.white {
+    color: var(--clr-white);
+}
+
+.whiteBG {
+    background-color: var(--clr-white);
+}
+
+.black {
+    color: black;
+}
+
+.dark-blue {
+    color: var(--clr-blue-dark);
+}
+
+.light-blue {
+    color: var(--clr-blue-light);
+}
+
+.bold {
+    font-weight: 700;
+}
+
+.clean-link {
+    text-decoration: none;
+}
+
+.flex {
+    display: flex;
+}
+
+.column {
+    flex-direction: column;
+}
+
+.gap-32 {
+    gap: 2rem;
+}
+
+.ml-auto {
+    margin-left: auto;
+}
+
+.opacity-25 {
+    opacity: 0.25;
+}
+
+.opacity-50 {
+    opacity: 0.5;
+}
+
+.opacity-100 {
+    opacity: 1 !important;
+}
+
+/* body::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    background-color: white;
+} */
+
+body::-webkit-scrollbar {
+    width: 12px;
+    background-color: #151620;
+    border-radius: 10px;
+}
+
+body::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, .3);
+    background-color: white;
+}
+
+body {
+    animation: fadeInAnimation ease-in 0.7s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+@keyframes fadeInAnimation {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}

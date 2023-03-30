@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;700&family=Bellefair&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style-general.css">
+  <link rel="stylesheet" href="style-destination.css">
+  <link rel="stylesheet" href="style-navbar.css">
+  <title>Frontend Mentor | Space tourism website</title>
+</head>
+<body> 
+
+  <script defer src="navigation.js"></script>
+  <script defer src="dynamicPlanet.js"></script>
+
+  <header> 
+    <div class="container--nav">
+      <div class="logo">
+        <img src="assets/shared/logo.svg" alt="logo">
+      </div>
+
+      <nav>
+        <div class="menu-icon">
+          <img src="assets/shared/icon-hamburger.svg" alt="open menu">
+        </div>
+        <div class="menu">
+          <div class="menu-close">
+            <img src="assets/shared/icon-close.svg" alt="close menu">
+          </div>
+          <div class="menu-options">
+            <div class="flex column gap-32">
+              <div class="font-nav bold">00</div>
+              <div class="font-nav bold">01</div>
+              <div class="font-nav bold">02</div>
+              <div class="font-nav bold">03</div>
+            </div>
+            <div class="flex column gap-32">
+              <a href="index.html" class="clean-link font-nav">HOME</a>
+              <a href="destination.html" class="clean-link font-nav">DESTINATION</a>
+              <a href="crew.html" class="clean-link font-nav">CREW</a>
+              <a href="technology.html" class="clean-link font-nav">TECHNOLOGY</a>
+            </div>
+            <div class="flex column gap-32 ml-auto">
+              <div class="rectangle"></div>
+              <div class="rectangle"></div>
+              <div class="rectangle"></div>
+              <div class="rectangle"></div>
+            </div>
+          </div>
+        </div>
+        <div class="menu-tablet">
+          <div class="nav-column">
+            <a href="index.html" class="links font-nav"><span class="bold">00</span> HOME</a>
+            <div class="rectangle-tablet"></div>
+          </div>
+          <div class="nav-column">
+            <a href="destination.html" class="links font-nav"><span class="bold">01</span> DESTINATION</a>
+            <div class="rectangle-tablet"></div>
+          </div>
+          <div class="nav-column">
+            <a href="crew.html" class="links font-nav"><span class="bold">02</span> CREW</a>
+            <div class="rectangle-tablet"></div>
+          </div>
+          <div class="nav-column">
+            <a href="technology.html" class="links font-nav"><span class="bold">03</span> TECHNOLOGY</a>
+            <div class="rectangle-tablet"></div>
+          </div>
+          <div class="white-line">
+          </div>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <div class="page-title">
+      <div class="page-number font-h5 white opacity-25">01</div>
+      <div class="page-objective font-h5 white">PICK YOUR DESTINATION</div>
+    </div>
+    <div class="container--main"> 
+      <div class="planet-image">
+        <img src="assets/destination/image-moon.png" alt="Image of the Moon">
+      </div>
+      <div class="planet-menu">
+        <div class="planet-selection">
+          <div class="planet-selection-column">
+            <div class="selection-name font-nav light-blue">MOON</div>
+            <div class="selection-rectangle"></div>
+          </div>
+          <div class="planet-selection-column">
+            <div class="selection-name font-nav light-blue">MARS</div>
+            <div class="selection-rectangle"></div>
+          </div>
+          <div class="planet-selection-column">
+            <div class="selection-name font-nav light-blue">EUROPA</div>
+            <div class="selection-rectangle"></div>
+          </div>
+          <div class="planet-selection-column">
+            <div class="selection-name font-nav light-blue">TITAN</div>
+            <div class="selection-rectangle"></div>
+          </div>
+        </div>
+        <div class="planet-information">
+          <h1 class="planet-name font-h2">MOON</h1>
+          <p class="planet-description font-body--responsive">See our planet as you've never seen it before. A perfect relaxing trip away to help regain perspective and come back refreshed. While you’re there, take in some history by visiting the Luna 2 and Apollo 11 landing sites.</p>
+          <div class="planet-stats">
+            <div class="planet-distance">
+              <div class="font-sub-h2">AVG. DISTANCE</div>
+              <div class="planet-km font-sub-h1">384,400 KM</div>
+            </div>
+            <div class="planet-travel">
+              <div class="font-sub-h2">EST. TRAVEL TIME</div>
+              <div class="planet-days font-sub-h1">3 DAYS</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+</body>
+</html>

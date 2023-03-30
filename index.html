@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;700&family=Bellefair&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style-general.css">
+  <link rel="stylesheet" href="style-home.css">
+  <link rel="stylesheet" href="style-navbar.css">
+  <title>Frontend Mentor | Space tourism website</title>
+</head>
+<body>
+
+  <script defer src="navigation.js"></script> 
+
+  <header>
+    <div class="container--nav">
+      <div class="logo">
+        <img src="assets/shared/logo.svg" alt="logo">
+      </div>
+
+      <nav>
+        <div class="menu-icon">
+          <img src="assets/shared/icon-hamburger.svg" alt="open menu">
+        </div>
+        <div class="menu">
+          <div class="menu-close">
+            <img src="assets/shared/icon-close.svg" alt="close menu">
+          </div>
+          <div class="menu-options">
+            <div class="flex column gap-32">
+              <div class="font-nav bold">00</div>
+              <div class="font-nav bold">01</div>
+              <div class="font-nav bold">02</div>
+              <div class="font-nav bold">03</div>
+            </div>
+            <div class="flex column gap-32">
+              <a href="index.html" class="clean-link font-nav">HOME</a>
+              <a href="destination.html" class="clean-link font-nav">DESTINATION</a>
+              <a href="crew.html" class="clean-link font-nav">CREW</a>
+              <a href="technology.html" class="clean-link font-nav">TECHNOLOGY</a>
+            </div>
+            <div class="flex column gap-32 ml-auto">
+              <div class="rectangle"></div>
+              <div class="rectangle"></div>
+              <div class="rectangle"></div>
+              <div class="rectangle"></div>
+            </div>
+          </div>
+        </div>
+        <div class="menu-tablet">
+          <div class="nav-column">
+            <a href="index.html" class="links font-nav"><span class="bold">00</span> HOME</a>
+            <div class="rectangle-tablet"></div>
+          </div>
+          <div class="nav-column">
+            <a href="destination.html" class="links font-nav"><span class="bold">01</span> DESTINATION</a>
+            <div class="rectangle-tablet"></div>
+          </div>
+          <div class="nav-column">
+            <a href="crew.html" class="links font-nav"><span class="bold">02</span> CREW</a>
+            <div class="rectangle-tablet"></div>
+          </div>
+          <div class="nav-column">
+            <a href="technology.html" class="links font-nav"><span class="bold">03</span> TECHNOLOGY</a>
+            <div class="rectangle-tablet"></div>
+          </div>
+          <div class="white-line">
+          </div>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <div class="container--main">
+      <div class="hero">
+        <div class="hero-cta font-h5--responsive">SO, YOU WANT TO TRAVEL TO</div>
+        <div class="hero-header font-h1--responsive">SPACE</div>
+        <div class="hero-body font-body--responsive">Let's face it; if you want to go to space, you might as well genuinely go to outer space and not hover kind of on the edge of it. Well sit back, and relax because we’ll give you a truly out of this world experience!</div>
+      </div>
+      <div class="wrapper-button">
+        <a href="destination.html" class="button font-sub-h1 black ">EXPLORE</a>
+      </div>
+    </div>
+  </main>
+
+</body>
+</html>

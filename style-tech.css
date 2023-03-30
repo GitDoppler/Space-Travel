@@ -1,0 +1,194 @@
+@import "style-general.css";
+
+/* General Styling */
+body {
+    overflow-x: hidden;
+    position: relative;
+    background-color: var(--clr-blue-dark);
+}
+
+body::after {
+    z-index: -1;
+    content: " ";
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.25;
+    background-image: url("assets/technology/background-technology-desktop.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.container--main {
+    position: relative;
+    width: clamp(20.44rem, calc(5.83rem + 62.34vw), 35.75rem);
+    margin-inline: auto;
+    margin-top: clamp(2.00rem, calc(0.09rem + 8.14vw), 4.00rem);
+    padding-bottom: clamp(3.63rem, calc(2.30rem + 5.63vw), 7.38rem);
+}
+
+.page-title {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.tech-image {
+    margin-block: 2rem;
+}
+
+.tech-selection {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    padding-bottom: 1.625rem;
+}
+
+.tech-selector {
+    cursor: pointer;
+    padding-block: 0.6875rem;
+    padding-inline: 1rem;
+    border: solid 1px #383B4B;
+    border-radius: 50%;
+    transition: border-color 0.2s ease-in;
+}
+
+.tech-selector:hover {
+    border-color: white;
+}
+
+.tech-selector:first-of-type {
+    padding-inline: 1.125rem;
+}
+
+.tech-title {
+    text-align: center;
+}
+
+.tech-name {
+    text-align: center;
+    padding-top: 0.5rem;
+    padding-bottom: 1rem;
+}
+
+.tech-description {
+    text-align: center;
+    width: clamp(20.50rem, calc(13.58rem + 29.52vw), 27.75rem);
+    margin-inline: auto;
+}
+
+.tech-image-desktop {
+    display: none;
+}
+
+@media(min-width:48em) {
+    .page-title {
+        justify-content: start;
+        padding-top: clamp(2.50rem, calc(-0.07rem + 5.36vw), 4.75rem);
+        margin-left: clamp(2.50rem, calc(-6.50rem + 18.75vw), 10.38rem);
+    }
+
+    .container--main {
+        width: clamp(35.75rem, calc(-2.82rem + 80.36vw), 69.50rem);
+        padding-bottom: 6.06rem;
+    }
+
+    .tech-image {
+        width: fit-content;
+        margin-inline: auto;
+        border: solid 1px #383B4B;
+        padding: clamp(0.00rem, calc(-2.29rem + 4.76vw), 2.00rem);
+    }
+
+
+    .tech-selection {
+        padding-bottom: 2.75rem;
+    }
+
+    .tech-selector {
+        padding-block: 1rem;
+        padding-inline: 1.75rem;
+    }
+
+    .tech-selector:first-of-type {
+        padding-inline: 1.875rem;
+    }
+
+    .tech-name {
+        padding-top: 1rem;
+    }
+
+}
+
+@media(min-width:90em) {
+    .tech-selector {
+        padding-block: 1.375rem;
+        padding-inline: 2.0625rem;
+    }
+
+    .tech-selector:first-of-type {
+        padding-inline: 2.1875rem;
+    }
+
+    .tech-image {
+        display: none;
+    }
+
+    .container--main {
+        display: flex;
+        gap: 5rem;
+        margin-top: 8.5625rem;
+        padding-bottom: 13.375rem;
+    }
+
+    .tech-selection {
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    .tech-title {
+        text-align: start;
+    }
+
+    .tech-name {
+        text-align: start;
+    }
+
+    .tech-description {
+        position: relative;
+        margin-left: 0;
+        text-align: start;
+    }
+
+    .tech-image-desktop {
+        display: block;
+        position: absolute;
+        right: -9.8125rem;
+        top: -7.5rem;
+    }
+
+}
+
+.fadeOutIn {
+    animation: fadeOutIn 1s;
+}
+
+@keyframes fadeOutIn {
+    0% {
+        opacity: 1;
+    }
+
+
+    50% {
+        opacity: 0;
+    }
+
+
+    100% {
+        opacity: 1;
+    }
+}
