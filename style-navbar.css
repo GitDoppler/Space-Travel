@@ -68,6 +68,10 @@
 
 @media(min-width:48em) {
 
+    .menu {
+        display: none;
+    }
+    
     .logo {
         margin-left: clamp(2.44rem, calc(1.29rem + 2.38vw), 3.44rem);
     }
